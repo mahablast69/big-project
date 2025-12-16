@@ -1,0 +1,7 @@
+.schedule-card {
+  transition: transform 0.2s ease;
+}
+
+.schedule-card:hover {
+  transform: scale(1.03);
+}
