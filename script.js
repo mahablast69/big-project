@@ -32,11 +32,17 @@ async function loadSchedule(fileName) {
     status.innerHTML = `<div class="alert alert-info">Loading schedule...</div>`;
     container.innerHTML = "";
 
-
-    const response = await fetch(`./${fileName}`);
+    const url = `./${fileName}`;
+    let response;
+    try {
+      response = await fetch(url);
+    } catch (netErr) {
+      throw new Error(`Network error fetching ${fileName}: ${netErr.message}`);
+    }
 
     if (!response.ok) {
-      throw new Error("File failed to load");
+      const bodyText = await response.text().catch(() => "");
+      throw new Error(`Failed to load ${fileName} (${response.status} ${response.statusText}) ${bodyText}`);
     }
 
     const data = await response.json();
@@ -66,10 +72,17 @@ async function loadSchedule(fileName) {
     });
 
   } catch (error) {
+    console.error(error);
+    let hint = "";
+    if (error.message && error.message.toLowerCase().includes('network')) {
+      hint = "<br/><small>Hint: If you opened the file with file://, run a local HTTP server instead.</small>";
+    }
 
     status.innerHTML = `
       <div class="alert alert-danger">
-        Sorry, this schedule could not be loaded.
+        <div>Sorry, this schedule could not be loaded.</div>
+        <div class="mt-2"><small>${error.message || error}</small></div>
+        ${hint}
       </div>
     `;
   }

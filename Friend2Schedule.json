@@ -1,0 +1,23 @@
+[
+  {
+    "className": "English III",
+    "teacher": "Mrs. Collins",
+    "roomNumber": "107",
+    "period": 1,
+    "subjectArea": "English"
+  },
+  {
+    "className": "Spanish I",
+    "teacher": "Señor Ruiz",
+    "roomNumber": "221",
+    "period": 2,
+    "subjectArea": "Language"
+  },
+  {
+    "className": "Physical Science",
+    "teacher": "Mr. Bradley",
+    "roomNumber": "306",
+    "period": 3,
+    "subjectArea": "Science"
+  }
+]

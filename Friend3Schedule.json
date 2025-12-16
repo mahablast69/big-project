@@ -1,0 +1,23 @@
+[
+  {
+    "className": "Computer Science",
+    "teacher": "Mr. Patel",
+    "roomNumber": "409",
+    "period": 1,
+    "subjectArea": "Technology"
+  },
+  {
+    "className": "Health",
+    "teacher": "Mrs. Stevens",
+    "roomNumber": "118",
+    "period": 2,
+    "subjectArea": "Health"
+  },
+  {
+    "className": "Art",
+    "teacher": "Ms. Riley",
+    "roomNumber": "501",
+    "period": 3,
+    "subjectArea": "Arts"
+  }
+]

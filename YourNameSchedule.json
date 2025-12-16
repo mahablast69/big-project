@@ -1,0 +1,23 @@
+[
+  {
+    "className": "Algebra I",
+    "teacher": "Mr. Adams",
+    "roomNumber": "201",
+    "period": 1,
+    "subjectArea": "Math"
+  },
+  {
+    "className": "English II",
+    "teacher": "Ms. Perry",
+    "roomNumber": "105",
+    "period": 2,
+    "subjectArea": "English"
+  },
+  {
+    "className": "Biology",
+    "teacher": "Mrs. White",
+    "roomNumber": "310",
+    "period": 3,
+    "subjectArea": "Science"
+  }
+]
